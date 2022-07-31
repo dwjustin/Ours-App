@@ -14,28 +14,24 @@ import { Fontisto } from '@expo/vector-icons';
 
 export default function App() {
   
-  const [name, setName]=useState('Justin')
-  const [session, setSession]=useState({number: 6, title: 'state'})
-  const [current, setCurrent]=useState(true)
-  const [count, setCount]=useState(0)
+  // const [name, setName]=useState('Justin')
+  // const [session, setSession]=useState({number: 6, title: 'state'})
+  // const [current, setCurrent]=useState(true)
+  // const [count, setCount]=useState(0)
 
-  const onClickHandler=()=>{
-    setName('Programming with Justin')
-    setSession({number:7, title: 'Style'})
-    setCurrent(false)
+  // const onClickHandler=()=>{
+  //   setName('Programming with Justin')
+  //   setSession({number:7, title: 'Style'})
+  //   setCurrent(false)
     
     
-  }
+  // }
 
-  const countHandler=()=>{
-    setCount(count+1)
-  }
+  // const countHandler=()=>{
+  //   setCount(count+1)
+  // }
 
   const Tab= createBottomTabNavigator();
-
-
-
-
 
   return (
     
@@ -49,9 +45,10 @@ export default function App() {
       <Button title='Add' onPress={countHandler}></Button>
       <StatusBar style="auto" />
     </View> */}
-      <Tab.Navigator >
+      <Tab.Navigator>
         <Tab.Screen name="Profile" component={Profile} options={{
           header: ()=>null,
+          tabBarActiveBackgroundColor: '#D3D3D3',
           tabBarIcon: ()=>(
             <Ionicons
               name='person-sharp'
@@ -61,6 +58,7 @@ export default function App() {
         }}/>
         <Tab.Screen name='Calender' component={Calender} options={{
           header: ()=>null,
+          tabBarActiveBackgroundColor: '#D3D3D3',
           tabBarIcon: ()=>(
             <Fontisto 
               name="date" 
@@ -71,6 +69,7 @@ export default function App() {
         }}/>
         <Tab.Screen name='Messanger' component={Messanger} options={{
           header: ()=>null,
+          tabBarActiveBackgroundColor: '#D3D3D3',
           tabBarIcon: ()=>(
             <Entypo 
               name="chat" 
