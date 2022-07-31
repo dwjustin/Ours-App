@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: '#fff',
+    color: '#ffffff',
+    fontSize: 20,
+    fontStyle: 'italic',
+    margin: 10,
   }
 });
