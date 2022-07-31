@@ -4,9 +4,13 @@ import React, {useState} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import ScreenA from './src/ScreenA';
-import ScreenB from './src/ScreenB';
+import Profile from './src/Profile';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Calender from './src/Calender';
+import Messanger from './src/Messanger';
+import {Ionicons, MaterialCommunityIcons} from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
 
 export default function App() {
   
@@ -28,7 +32,7 @@ export default function App() {
   }
 
   const Tab= createBottomTabNavigator();
-  
+
 
 
 
@@ -45,15 +49,37 @@ export default function App() {
       <Button title='Add' onPress={countHandler}></Button>
       <StatusBar style="auto" />
     </View> */}
-    <Tab.Navigator>
-      <Tab.Screen name="Screen_A" component={ScreenA} options={{
-        header: ()=>null
-      }}/>
-      <Tab.Screen name='Screen_B' component={ScreenB} options={{
-        header: ()=>null
-      }}/>
-    </Tab.Navigator>
-
+      <Tab.Navigator >
+        <Tab.Screen name="Profile" component={Profile} options={{
+          header: ()=>null,
+          tabBarIcon: ()=>(
+            <Ionicons
+              name='person-sharp'
+              size={30}
+            />
+          ),
+        }}/>
+        <Tab.Screen name='Calender' component={Calender} options={{
+          header: ()=>null,
+          tabBarIcon: ()=>(
+            <Fontisto 
+              name="date" 
+              size={24} 
+              color="black" 
+            />
+          ),
+        }}/>
+        <Tab.Screen name='Messanger' component={Messanger} options={{
+          header: ()=>null,
+          tabBarIcon: ()=>(
+            <Entypo 
+              name="chat" 
+              size={24} 
+              color="black" 
+            />
+          )
+        }}/>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }

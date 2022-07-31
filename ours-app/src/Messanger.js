@@ -2,7 +2,7 @@ import {  Text, View} from 'react-native';
 import React from 'react';
 import { TouchableOpacity  } from 'react-native';
 
-function ScreenB({navigation}){
+function Messanger({navigation}){
     
  
     
@@ -13,4 +13,4 @@ function ScreenB({navigation}){
     )
   }
 
-export default ScreenB;
+export default Messanger;

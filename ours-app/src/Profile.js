@@ -4,7 +4,9 @@ import React, {useState} from 'react';
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-function ScreenA({navigation}){
+
+
+function Profile({navigation}){
     
 
     
@@ -16,4 +18,4 @@ function ScreenA({navigation}){
     )
   }
 
-  export default ScreenA;
+  export default Profile;
