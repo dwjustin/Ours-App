@@ -6,9 +6,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 function ScreenA({navigation}){
     
-    const onPressHandler=()=>{
-      navigation.navigate('Screen_B')
-    }
+
     
     return(
       <View>

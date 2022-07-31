@@ -4,9 +4,7 @@ import { TouchableOpacity  } from 'react-native';
 
 function ScreenB({navigation}){
     
-    const onPressHandler=()=>{
-      navigation.navigate('Screen_A')
-    }
+ 
     
     return(
         <View>
