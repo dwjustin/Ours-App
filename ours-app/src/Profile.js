@@ -1,10 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import {  Text, View} from 'react-native';
-import React, {useState} from 'react';
-
-import { TouchableOpacity } from 'react-native-gesture-handler';
-
-
+import React from 'react';
 
 function Profile({navigation}){
     
